@@ -47,6 +47,16 @@ with open(file_to_load, "r") as election_data:
     
         # Update candidate count
         candidate_votes[candidate_name] += 1
+
+# Save results to a file
+with open(file_to_save, "w") as txt_file:
+    election_results =  (
+                        f"\nElection Results \n"
+                        f"-------------------------- \n"
+                        f"Total Votes: {total_votes:,} \n"
+                        f"-------------------------- \n"
+                        )
+    txt_file.write(election_results)   
     
     #Print Total Votes
     #print(total_votes)
@@ -58,21 +68,25 @@ with open(file_to_load, "r") as election_data:
     #print(candidate_votes)
 
     # Print percentage of votes for each candidate
-    print("\n")
     for candidate in candidate_options:
         votes = candidate_votes[candidate]
-        percent_votes = votes/total_votes*100
-        print(f"{candidate}:  {percent_votes:.1f}% ({votes:,}). \n")
+        percent_votes = float(votes)/float(total_votes)*100
+        #print(f"{candidate}:  {percent_votes:.1f}% ({votes:,}). \n")
+        candidate_result = (f"{candidate}:  {percent_votes:.1f}% ({votes:,}). \n")
+        txt_file.write(candidate_result)
 
+        # Determine winner stats
         if votes > winning_count and percent_votes > winning_percentage:
             winning_candidate = candidate
             winning_count = votes
             winning_percentage = percent_votes
 
+    # Print winning candidate stats 
     winning_candidate_summary = (f"---------------------------------------- \n"
                                 f"Winner: {winning_candidate} \n"
                                 f"Winning Vote Count: {winning_count:,} \n"
                                 f"Winning Percentage: {winning_percentage:.1f}% \n"
                                 f"---------------------------------------- \n"
                                 )
-    print(winning_candidate_summary)
+    #print(winning_candidate_summary)
+    txt_file.write(winning_candidate_summary)
