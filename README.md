@@ -44,6 +44,8 @@ The audit requires the following additional calculations in addition to original
 <br /> 
 
 Screenshot below shows summary of voting results printed from the command line:
+<br /> 
+
 <img src="Resources/Election_Results_Printed_to_Command_Line.png" width=700 align=center>
 
 <br /> 
