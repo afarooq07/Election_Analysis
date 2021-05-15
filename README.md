@@ -14,10 +14,10 @@ The audit requires the following additional calculations in addition to original
 <br />
 
 ## Resources
-- Data Source: election_results.csv
-- Code file: PyPoll_Challenge.py
-- Images: Resources\Election_Results_Printed_to_Command_Line.png
-- Election Results File: analysis\election_analysis.txt
+- **Data Source:** election_results.csv
+- **Code file:** PyPoll_Challenge.py
+- **Images:** Resources\Election_Results_Printed_to_Command_Line.png
+- **Election Results File:** analysis\election_analysis.txt
 <br />
 
 ## Election-Audit Results
@@ -45,15 +45,18 @@ The audit requires the following additional calculations in addition to original
 
 Screenshot below shows summary of voting results printed from the command line:
 <img src="Resources/Election_Results_Printed_to_Command_Line.png" width=700 align=center>
+
 <br /> 
 
 ## Election Audit Summary
 The script can be made generic in a couple of ways depending on the format of data provided:
 <br /> 
-1. Assuming file format will stay the same, the script can be modified to take file name and location as an input. This will make the script generic for voting analysis of any district. 
-<br />  
+
+1. Assuming file format will stay the same, the script can be modified to take file name and location as an input. This will make the script generic for voting analysis of any district.  
+
 2. Another possibility is to update file format to use Location column instead of county. Location column can represent cities, towns or counties.  
     - The result will show voting results by candidate and location.
-    - An input argument can be used to specify if location should be labeled as counties or cities in the analysis report.
-<br /> 
+    - An input argument can be used to specify if location should be labeled as counties or cities in the analysis report.  
+
+
 3. Since the code to calculate stats at candidate and county level follow the same logic, the script can be updated to take an argument to output results for candidate or county (location) or both.
