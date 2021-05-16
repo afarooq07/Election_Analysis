@@ -55,14 +55,14 @@ The results also saved in analysis\election_analysis.txt file
 <br /> 
 
 ## Election Audit Summary
-The script can be made generic in a couple of ways depending on the format of data provided:
+The script can be made generic in a couple of ways depending on the format of data provided. For recommendations specific to this script, lets assume that file format will stay the same: Ballot ID,  County (or a different type location such as city) and Candidate.
 <br /> 
 
-1. Assuming file format will stay the same, the script can be modified to take file name and location as an input. This will make the script generic for voting analysis of any district election.  
+1. Assuming file format will stay the same, the script can be modified to take file name and file location as an input argument. This will make the script generic for voting analysis of any district election where there is one file per district.  
 
-2. Another possibility is to update file format to use Location column instead of county. Location column can represent cities, towns or counties.  
-    - The result will show voting results by candidate and location.
+2. Another possibility is to update "County" column header to "Location". Location column can then represent cities, towns or counties.  
+    - The result will show voting results by candidates and locations.
     - An input argument can be used to specify if location should be labeled as counties or cities in the analysis report.  
 
 
-3. Since the code to calculate stats at candidate and county level follow the same logic, it can be consolidated into one block. The script can be updated to take an argument to calculate and output results for candidate or county (or a different location type such as city) or both.
+3. Expanding on (2) above, since the code to calculate stats at candidate and county level follow the same logic, it can be consolidated into one block. The script can be updated to take an argument to calculate and output results for a) candidates or b) locations (such as county/city/town) or c) both (candidates and locations) using the same code block.
