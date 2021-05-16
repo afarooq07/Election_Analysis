@@ -50,15 +50,19 @@ Screenshot below shows summary of voting results printed from the command line:
 
 <br /> 
 
+The results also saved in analysis\election_analysis.txt file
+
+<br /> 
+
 ## Election Audit Summary
 The script can be made generic in a couple of ways depending on the format of data provided:
 <br /> 
 
-1. Assuming file format will stay the same, the script can be modified to take file name and location as an input. This will make the script generic for voting analysis of any district.  
+1. Assuming file format will stay the same, the script can be modified to take file name and location as an input. This will make the script generic for voting analysis of any district election.  
 
 2. Another possibility is to update file format to use Location column instead of county. Location column can represent cities, towns or counties.  
     - The result will show voting results by candidate and location.
     - An input argument can be used to specify if location should be labeled as counties or cities in the analysis report.  
 
 
-3. Since the code to calculate stats at candidate and county level follow the same logic, the script can be updated to take an argument to output results for candidate or county (location) or both.
+3. Since the code to calculate stats at candidate and county level follow the same logic, it can be consolidated into one block. The script can be updated to take an argument to calculate and output results for candidate or county (or a different location type such as city) or both.
