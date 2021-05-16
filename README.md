@@ -58,7 +58,7 @@ The results also saved in analysis\election_analysis.txt file
 The script can be made generic in a couple of ways depending on the format of data provided. For recommendations specific to this script, lets assume that file format will stay the same: Ballot ID,  County and Candidate.
 <br /> 
 
-1. Assuming file format will stay the same, the script can be modified to take file name and file location as an input argument. This will make the script generic for voting analysis of any district election where there is one file per district.  
+1. The script can be modified to take file name and file location as input arguments. This will make the script generic for voting analysis of any district election where there is one file per district.
 
 2. Another possibility is to update "County" column header to "Location". Location column can then represent cities, towns or counties.  
     - The result will show voting results by candidates and locations.
